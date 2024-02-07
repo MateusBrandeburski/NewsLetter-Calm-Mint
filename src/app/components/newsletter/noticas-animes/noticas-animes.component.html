@@ -1,0 +1,27 @@
+<div class="container p-5">
+    <table class="table table-light table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Notícia</th>
+            <th scope="col">URL</th>
+            <th scope="col">Cadastrado</th>
+            <th scope="col">Atualizado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let noticia of pagedItems">
+            <td data-label="Notícia">{{noticia.noticia}}</td>
+            <td data-label="URL"><a [href]="noticia.link" target="_blank">Link</a></td>
+            <td data-label="Cadastrado">{{noticia.date_cadastro | date: 'dd/MM/yy' }}</td>
+            <td data-label="Atualizado">{{noticia.data_atualizacao | date: 'dd/MM/yy' }}</td>
+          </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-between mb-3">
+      <div class="lead">{{getTotalAtualNaPagina()}}</div>
+      <div>
+        <button class="btn btn-secondary me-2" *ngIf="currentPage !== 1" (click)="setPage(currentPage - 1)">Anterior</button>
+        <button class="btn btn-secondary" (click)="setPage(currentPage + 1)" [disabled]="currentPage * itemsPerPage >= NoticiasAnime.length">Próximo</button>
+      </div>
+    </div>
+  </div>

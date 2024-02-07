@@ -1,0 +1,17 @@
+@media screen and (max-width: 767px) {
+    .featurette .col-md-5 h3 {
+        margin-top: 20px; /* Ajuste a margem conforme desejado para afastar o h3 do vídeo */
+    }
+}
+
+.full-screen1 {
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
+    background-color: #ffffff; /* Substitua pela cor de fundo desejada ou imagem */
+  }
+
+.full-screen2 {
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
+    background-color: #ffffff; /* Substitua pela cor de fundo desejada ou imagem */
+  }

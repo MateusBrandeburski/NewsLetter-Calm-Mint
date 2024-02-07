@@ -1,0 +1,40 @@
+@media screen and (max-width: 767px) {
+
+    /* Esconde o segundo SVG */
+    svg {
+        display: none;
+      }
+
+    .text-bg-dark {
+        text-align: center; /* Centraliza o texto */
+    }
+
+  }
+  
+
+@media screen and (min-width: 768px) {
+    .d-flex.justify-content-center {
+      display: flex !important;
+      justify-content: center !important;
+    }
+  
+    .nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-center.mb-md-0.w-100.text-center {
+      display: flex !important;
+      justify-content: center !important;
+    }
+  
+}
+
+/* Estilos para os links */
+.nav-link {
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+    font-size: 16px; /* Define o tamanho base do texto */
+}
+
+/* Quando clicado ou focado, aumenta o tamanho do texto */
+.nav-link:active,
+.nav-link:focus {
+    transform: scale(1.1); /* Aumenta o tamanho do texto */
+}
+
+
