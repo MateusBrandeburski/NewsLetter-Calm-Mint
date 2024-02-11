@@ -7,7 +7,7 @@ import { CorridasDF, NoticiasCientificas, NoticiasAnime, NoticiasAtuais } from '
   providedIn: 'root'
 })
 export class ApiNewsletterService {
-  private readonly API = 'https://odin-srv-project.com:7000';
+  private readonly API = 'https://192.168.0.5:7000';
 
   constructor(private http: HttpClient) {}
 
