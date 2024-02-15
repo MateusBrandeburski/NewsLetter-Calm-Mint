@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  darkThemeEnabled: boolean = false;
+  currentTheme: string = 'light'; // Valor padrão é 'light'
 
   constructor() { }
 
@@ -15,27 +15,24 @@ export class HeaderComponent implements OnInit {
   }
 
   checkTheme() {
-    const savedTheme = localStorage.getItem('dark-theme');
-    if (savedTheme !== null) {
-      this.darkThemeEnabled = savedTheme === 'true';
-    } else {
-      this.darkThemeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
+    const savedTheme = localStorage.getItem('color-theme');
+    // Se o tema está salvo, use-o. Senão, defina com base na preferência do sistema.
+    this.currentTheme = savedTheme ?? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light');
     this.updateTheme();
   }
   
-
   toggleTheme() {
-    this.darkThemeEnabled = !this.darkThemeEnabled;
-    localStorage.setItem('dark-theme', String(this.darkThemeEnabled));
+    // Alterna entre temas 'light' e 'dark'
+    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('color-theme', this.currentTheme);
     this.updateTheme();
   }
 
   updateTheme() {
-    if (this.darkThemeEnabled) {
-      document.body.classList.add('dark'); // Ou document.documentElement.classList.add('dark');
+    if (this.currentTheme === 'dark') {
+      document.body.classList.add('dark');
     } else {
-      document.body.classList.remove('dark'); // Ou document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
     }
   }
 }
