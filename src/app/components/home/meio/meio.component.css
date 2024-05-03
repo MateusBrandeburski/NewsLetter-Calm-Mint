@@ -1,0 +1,63 @@
+/* CSS Principal */
+/* CSS Responsivo para telas menores, como celulares */
+
+/* Estilos para telas menores */
+@media screen and (max-width: 767px) {
+    .row-cols-1 {
+      /* Exibição dos cards em uma coluna para telas menores */
+      column-count: 1;
+    }
+  
+    /* Estilos adicionais para os cards em telas menores */
+    .card {
+      /* Ajuste do espaçamento entre os cards */
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; /* Largura dos cards ajustada para 80% da tela */
+    }
+  
+    /* Estilos para hover nos cards em telas menores */
+    .card:hover {
+      transform: none; /* Remove a escala no hover para telas menores */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra nos cards */
+    }
+  }
+  
+
+
+
+/* Estilos para telas maiores */
+.card {
+    /* Estilos gerais dos cards */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Estilos para hover nos cards */
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para títulos nos cards */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  /* Estilos para descrição nos cards */
+  .card-description {
+    font-size: 1rem;
+  }
+  
+  /* Estilos para as tags nos cards */
+  .card-tag {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  

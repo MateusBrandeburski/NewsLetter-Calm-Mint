@@ -20,4 +20,4 @@ export class CorridasDfComponent implements OnInit {
     });
   }
 
-}
+}  

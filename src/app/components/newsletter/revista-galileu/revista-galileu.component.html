@@ -1,38 +1,9 @@
-<!-- <div class="container p-5">
-    <table class="table table-light table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Notícia</th>
-            <th scope="col">URL</th>
-            <th scope="col">Cadastrado</th>
-            <th scope="col">Atualizado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let noticia of pagedItems">
-            <td data-label="Notícia">{{noticia.noticia}}</td>
-            <td data-label="URL"><a [href]="noticia.link" target="_blank">Link</a></td>
-            <td data-label="Cadastrado">{{noticia.date_cadastro | date: 'dd/MM/yy' }}</td>
-            <td data-label="Atualizado">{{noticia.data_atualizacao | date: 'dd/MM/yy' }}</td>
-          </tr>
-        </tbody>
-    </table>
-    <div class="d-flex justify-content-between mb-3">
-      <div class="lead">{{getTotalAtualNaPagina()}}</div>
-      <div>
-        <button class="btn btn-secondary me-2" *ngIf="currentPage !== 1" (click)="setPage(currentPage - 1)">Anterior</button>
-        <button class="btn btn-secondary" (click)="setPage(currentPage + 1)" [disabled]="currentPage * itemsPerPage >= NoticiasCientificas.length">Próximo</button>
-      </div>
-    </div>
-  </div> -->
-
-
 <div class="flex items-center justify-center min-h-screen" style="margin-top: 6%; margin-bottom: 5%;">
   <div class="overflow-x-auto shadow-md sm:rounded-lg max-w-screen-xl shadow-gray-800">
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left rtl:text-right"> 
         <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white">
-          <tr xc>
+          <tr class="text-lg">
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Notícia</th>
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Fonte</th>
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Cadastrado</th>
@@ -40,8 +11,8 @@
           </tr>
         </thead>
         <tbody class="divide-y dark:divide-gray-700">
-          <tr *ngFor="let noticia of NoticiasCientificas" class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-white text-black border-gray-400 dark:border-white">
-            <td class="px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Nome">{{noticia.noticia}}</td>
+          <tr *ngFor="let noticia of NoticiasCientificas" class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-white text-black border-gray-400 dark:border-white text-lg">
+            <td class=" px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Nome">{{noticia.noticia}}</td>
             <td class="px-6 py-4 font-bold underline border-r border-gray-400 dark:border-white" data-label="fonte"><a [href]="noticia.link" target="_blank">Link</a></td> 
             <td class="px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Cadastrado">{{noticia.date_cadastro | date: 'dd/MM/yy' }}</td>
             <td class="px-6 py-4" data-label="Atualizado">{{noticia.data_atualizacao | date: 'dd/MM/yy' }}</td>
@@ -50,4 +21,4 @@
       </table>
     </div>
   </div>
-</div>
+</div> 

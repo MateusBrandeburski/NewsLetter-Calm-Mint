@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RevistaGalileuComponent } from './components/newsletter/revista-galileu/revista-galileu.component';
 import { NoticasAnimesComponent } from './components/newsletter/noticas-animes/noticas-animes.component';
 import { NoticiasAtuaisComponent } from './components/newsletter/noticias-atuais/noticias-atuais.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,12 @@ const routes: Routes = [
   {
     path: 'noticias-atuais',
     component: NoticiasAtuaisComponent
-  }
+  },
+  {
+    path: 'sobre',
+    component: SobreComponent
+  }  
+
 ];
 
 @NgModule({

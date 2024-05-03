@@ -3,7 +3,7 @@
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-left rtl:text-right"> 
         <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr xc>
+          <tr class="text-lg">
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Nome</th>
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Distância</th>
             <th scope="col" class="px-6 py-3 border-r border-gray-400 dark:border-white">Evento</th>
@@ -15,7 +15,7 @@
           </tr>
         </thead>
         <tbody class="divide-y dark:divide-gray-700">
-          <tr *ngFor="let corrida of listaCorridasDF" class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-white text-black border-gray-400 dark:border-white">
+          <tr *ngFor="let corrida of listaCorridasDF" class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-white text-black border-gray-400 dark:border-white text-lg">
             <td class="px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Nome">{{corrida.nome}}</td>
             <td class="px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Distância">{{corrida.distancia}}</td>
             <td class="px-6 py-4 border-r border-gray-400 dark:border-white" data-label="Evento">{{corrida.data_evento | date: 'dd/MM/yy'}}</td>
